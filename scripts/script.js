@@ -355,7 +355,7 @@ function SortedArray() {
     ascendingDescendin = 0;
   }
 
-  let arrayString = arraySort.map((task) => `{${task.task} -${task.time}}`);
+  let arrayString = arraySort.map((task) => `{${task.task} -${new Date(task.time).getDate()}.${new Date(task.time).getMonth()}.${new Date(task.time).getFullYear()}  ${new Date(task.time).getHours()}:${new Date(task.time).getMinutes()}}`);
   document.getElementById("placePrint").textContent = arrayString;
 }
 function AddPremium() {
